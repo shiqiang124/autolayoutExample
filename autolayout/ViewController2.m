@@ -10,6 +10,9 @@
 
 @interface ViewController2 ()
 @property (weak, nonatomic) IBOutlet UIScrollView *myscrollView;
+
+@property (strong, nonatomic) UIView *scrollContentView;//作为myscrollView的childView
+
 @property (weak, nonatomic) IBOutlet UIView *topNav;
 @property (weak, nonatomic) IBOutlet UIView *photoView;
 
@@ -34,7 +37,35 @@
     
     self.myscrollView.pagingEnabled = YES;
     self.myscrollView.showsVerticalScrollIndicator = NO;
+    self.myscrollView.showsHorizontalScrollIndicator = NO;
     //self.myscrollView.showsHorizontalScrollIndicator = NO;
+    
+    UIView *view1 = [UIView new];
+    view1.backgroundColor = UIColor.greenColor;
+    view1.layer.borderColor = UIColor.blackColor.CGColor;
+    view1.layer.borderWidth = 2;
+    self.scrollContentView = view1;
+    
+    [self.myscrollView addSubview:self.scrollContentView];
+    
+    
+    UIScrollView *superview = self.myscrollView;
+    [self.scrollContentView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(superview);
+        make.left.equalTo(superview);
+        make.bottom.equalTo(superview);
+        make.right.equalTo(superview);
+        
+        make.height.equalTo(superview);
+        make.width.equalTo(self.view.frame.size.width * 2);
+        
+        
+    }];
+    
+
+    NSLog(@"self.topNav.frame:%@",NSStringFromCGRect(self.topNav.frame));
+    NSLog(@"self.photoView.frame:%@",NSStringFromCGRect(self.photoView.frame));
+    NSLog(@"self.myscrollView.frame:%@",NSStringFromCGRect(self.myscrollView.frame));
     
    
     
@@ -43,15 +74,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    NSLog(@"self.topNav.frame:%@",NSStringFromCGRect(self.topNav.frame));
-    NSLog(@"self.photoView.frame:%@",NSStringFromCGRect(self.photoView.frame));
-    NSLog(@"self.myscrollView.frame:%@",NSStringFromCGRect(self.myscrollView.frame));
-    
-    CGSize newSize = CGSizeMake(self.view.frame.size.width * 2, self.view.frame.size.height);
-    [self.myscrollView setContentSize:newSize];
-    
-    NSLog(@"self.myscrollView.frame:%@",NSStringFromCGRect(self.myscrollView.frame));
+     [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning

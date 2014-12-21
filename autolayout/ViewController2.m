@@ -11,10 +11,10 @@
 @interface ViewController2 ()
 @property (weak, nonatomic) IBOutlet UIScrollView *myscrollView;
 
-@property (strong, nonatomic) UIView *scrollContentView;//作为myscrollView的childView
+@property (weak, nonatomic) IBOutlet UIView *scrollContentView;
 
-@property (weak, nonatomic) IBOutlet UIView *topNav;
-@property (weak, nonatomic) IBOutlet UIView *photoView;
+
+- (IBAction)clickMove:(id)sender;
 
 @end
 
@@ -37,37 +37,38 @@
     
     self.myscrollView.pagingEnabled = YES;
     self.myscrollView.showsVerticalScrollIndicator = NO;
-    self.myscrollView.showsHorizontalScrollIndicator = NO;
-    //self.myscrollView.showsHorizontalScrollIndicator = NO;
+    self.myscrollView.showsHorizontalScrollIndicator = YES;
+
     
-    UIView *view1 = [UIView new];
-    view1.backgroundColor = UIColor.greenColor;
-    view1.layer.borderColor = UIColor.blackColor.CGColor;
-    view1.layer.borderWidth = 2;
-    self.scrollContentView = view1;
-    
-    [self.myscrollView addSubview:self.scrollContentView];
-    
-    
-    UIScrollView *superview = self.myscrollView;
-    [self.scrollContentView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(superview);
-        make.left.equalTo(superview);
-        make.bottom.equalTo(superview);
-        make.right.equalTo(superview);
-        
-        make.height.equalTo(superview);
-        make.width.equalTo(self.view.frame.size.width * 2);
-        
-        
-    }];
     
 
-    NSLog(@"self.topNav.frame:%@",NSStringFromCGRect(self.topNav.frame));
-    NSLog(@"self.photoView.frame:%@",NSStringFromCGRect(self.photoView.frame));
-    NSLog(@"self.myscrollView.frame:%@",NSStringFromCGRect(self.myscrollView.frame));
-    
-   
+    self.scrollContentView.layer.borderColor = UIColor.blackColor.CGColor;
+    self.scrollContentView.layer.borderWidth = 2;
+
+    /*
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self.scrollContentView attribute:NSLayoutAttributeWidth
+                                 relatedBy:NSLayoutRelationEqual toItem:self.myscrollView
+                                 attribute:NSLayoutAttributeWidth multiplier:2.0 constant:0.0];
+
+    [self.myscrollView addConstraint:constraint];
+    */
+    //[self.myscrollView updateConstraints];
+    //[self.view setNeedsLayout];
+    //[self.view layoutIfNeeded];
+
+    //NSLog(@"self.topNav.frame:%@",NSStringFromCGRect(self.topNav.frame));
+    //NSLog(@"self.photoView.frame:%@",NSStringFromCGRect(self.photoView.frame));
+    //NSLog(@"self.myscrollView.frame:%@",NSStringFromCGRect(self.myscrollView.frame));
+    /*
+    [self.view.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
+        //WLog(@"h:%@",constraint.description);
+        if ((constraint.firstItem == self.scrollContentView) && (constraint.firstAttribute == NSLayoutAttributeWidth)) {
+            //WLog(@"=====:%@",constraint.description);
+            constraint.constant = 2.0f;
+        }
+        
+    }];
+   */
     
     
 }
@@ -86,4 +87,22 @@
 #pragma mark - scrollview
 
 
+- (IBAction)clickMove:(id)sender {
+    
+    [self.view.constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
+        //WLog(@"h:%@",constraint.description);
+        if ((constraint.firstItem == self.myscrollView) && (constraint.constant == 61.f)) {
+            //WLog(@"=====:%@",constraint.description);
+            constraint.constant = 128.0f;
+        }else if((constraint.firstItem == self.myscrollView) && (constraint.constant == 128.f)){
+            constraint.constant = 61.0f;
+        }
+        
+    }];
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+    
+}
 @end

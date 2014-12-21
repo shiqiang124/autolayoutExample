@@ -3,14 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController2">
             <connections>
                 <outlet property="myscrollView" destination="a9P-Li-azh" id="Okd-jV-ELG"/>
-                <outlet property="photoView" destination="0MU-se-KeA" id="gdz-lb-GBk"/>
-                <outlet property="topNav" destination="Zw3-rv-xii" id="pyz-x4-x8V"/>
+                <outlet property="scrollContentView" destination="CUh-TE-0FJ" id="0wJ-wi-f0I"/>
                 <outlet property="view" destination="iN0-l3-epB" id="qWo-bb-Ygb"/>
             </connections>
         </placeholder>
@@ -19,37 +17,42 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zw3-rv-xii" userLabel="top">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="MC5-Rt-Np5"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MU-se-KeA" userLabel="mid">
-                    <rect key="frame" x="0.0" y="44" width="320" height="320"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="0MU-se-KeA" secondAttribute="height" multiplier="1:1" id="1Xe-xf-ifN"/>
-                    </constraints>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivh-tH-QOW">
+                    <rect key="frame" x="145" y="40" width="30" height="30"/>
+                    <state key="normal" title="点击">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickMove:" destination="-1" eventType="touchUpInside" id="1vn-oZ-2De"/>
+                    </connections>
+                </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9P-Li-azh">
-                    <rect key="frame" x="0.0" y="364" width="320" height="204"/>
-                    <color key="backgroundColor" red="0.3202701463" green="0.66666666669999997" blue="0.62484498479999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="0.0" y="131" width="320" height="437"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-TE-0FJ" userLabel="cntView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="437"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.80781306340000003" blue="0.66505716400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="CUh-TE-0FJ" firstAttribute="height" secondItem="a9P-Li-azh" secondAttribute="height" id="0GB-NQ-YsH"/>
+                        <constraint firstItem="CUh-TE-0FJ" firstAttribute="leading" secondItem="a9P-Li-azh" secondAttribute="leading" id="YHt-ph-R26"/>
+                        <constraint firstAttribute="trailing" secondItem="CUh-TE-0FJ" secondAttribute="trailing" id="YRi-d4-stO"/>
+                        <constraint firstItem="CUh-TE-0FJ" firstAttribute="top" secondItem="a9P-Li-azh" secondAttribute="top" id="cRe-FG-1wZ"/>
+                        <constraint firstAttribute="width" secondItem="CUh-TE-0FJ" secondAttribute="width" id="fLn-rh-l42"/>
+                        <constraint firstAttribute="bottom" secondItem="CUh-TE-0FJ" secondAttribute="bottom" id="ptM-0N-Ycp"/>
+                    </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="0MU-se-KeA" firstAttribute="top" secondItem="Zw3-rv-xii" secondAttribute="bottom" id="ChS-yH-qyW"/>
-                <constraint firstAttribute="trailing" secondItem="a9P-Li-azh" secondAttribute="trailing" id="KgS-e7-Yw5"/>
-                <constraint firstAttribute="trailing" secondItem="0MU-se-KeA" secondAttribute="trailing" id="L4V-V8-84s"/>
-                <constraint firstItem="a9P-Li-azh" firstAttribute="top" secondItem="0MU-se-KeA" secondAttribute="bottom" id="Qdn-S4-cW2"/>
-                <constraint firstItem="Zw3-rv-xii" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UfA-fs-KFS"/>
-                <constraint firstItem="0MU-se-KeA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZvC-w6-wg1"/>
-                <constraint firstItem="Zw3-rv-xii" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cLp-bt-PvH"/>
-                <constraint firstItem="a9P-Li-azh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="joY-Le-sri"/>
-                <constraint firstAttribute="bottom" secondItem="a9P-Li-azh" secondAttribute="bottom" id="nrZ-ZN-9Zd"/>
-                <constraint firstAttribute="trailing" secondItem="Zw3-rv-xii" secondAttribute="trailing" id="q86-YX-Fq9"/>
+                <constraint firstAttribute="centerX" secondItem="Ivh-tH-QOW" secondAttribute="centerX" id="AeQ-dR-S1k"/>
+                <constraint firstAttribute="bottom" secondItem="a9P-Li-azh" secondAttribute="bottom" id="RsR-Jx-c2O"/>
+                <constraint firstAttribute="trailing" secondItem="a9P-Li-azh" secondAttribute="trailing" id="TK2-eA-hcK"/>
+                <constraint firstItem="a9P-Li-azh" firstAttribute="top" secondItem="Ivh-tH-QOW" secondAttribute="bottom" constant="61" id="aqZ-q0-R47"/>
+                <constraint firstItem="Ivh-tH-QOW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="v7J-th-k7m"/>
+                <constraint firstItem="a9P-Li-azh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xo4-kq-PGw"/>
             </constraints>
         </view>
     </objects>

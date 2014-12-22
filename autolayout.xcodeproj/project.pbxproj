@@ -17,6 +17,11 @@
 		1695A09F1A3999D500CFC214 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1695A0921A3999D500CFC214 /* NSArray+MASAdditions.m */; };
 		1695A0A01A3999D500CFC214 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1695A0951A3999D500CFC214 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		1695A0A11A3999D500CFC214 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1695A0971A3999D500CFC214 /* View+MASAdditions.m */; };
+		16BD2AC21A4863740097EA33 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BD2AC01A4863740097EA33 /* ViewController3.m */; };
+		16BD2AC31A4863740097EA33 /* ViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BD2AC11A4863740097EA33 /* ViewController3.xib */; };
+		16BD2AC51A48647E0097EA33 /* ava@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BD2AC41A48647E0097EA33 /* ava@2x.png */; };
+		16BD2AC91A4866650097EA33 /* ViewController31.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BD2AC71A4866650097EA33 /* ViewController31.m */; };
+		16BD2ACA1A4866650097EA33 /* ViewController31.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16BD2AC81A4866650097EA33 /* ViewController31.xib */; };
 		CEA2810219E62D3A00A6B4B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2810119E62D3A00A6B4B5 /* Foundation.framework */; };
 		CEA2810419E62D3A00A6B4B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2810319E62D3A00A6B4B5 /* CoreGraphics.framework */; };
 		CEA2810619E62D3A00A6B4B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2810519E62D3A00A6B4B5 /* UIKit.framework */; };
@@ -70,6 +75,13 @@
 		1695A0961A3999D500CFC214 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
 		1695A0971A3999D500CFC214 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
 		1695A0981A3999D500CFC214 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		16BD2ABF1A4863740097EA33 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
+		16BD2AC01A4863740097EA33 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		16BD2AC11A4863740097EA33 /* ViewController3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController3.xib; sourceTree = "<group>"; };
+		16BD2AC41A48647E0097EA33 /* ava@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ava@2x.png"; sourceTree = "<group>"; };
+		16BD2AC61A4866650097EA33 /* ViewController31.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController31.h; sourceTree = "<group>"; };
+		16BD2AC71A4866650097EA33 /* ViewController31.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController31.m; sourceTree = "<group>"; };
+		16BD2AC81A4866650097EA33 /* ViewController31.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController31.xib; sourceTree = "<group>"; };
 		CEA280FE19E62D3A00A6B4B5 /* autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA2810119E62D3A00A6B4B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEA2810319E62D3A00A6B4B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +202,7 @@
 		CEA2810719E62D3A00A6B4B5 /* autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				16BD2AC41A48647E0097EA33 /* ava@2x.png */,
 				1695A0801A3999D500CFC214 /* arc */,
 				CEA2811019E62D3A00A6B4B5 /* AppDelegate.h */,
 				CEA2811119E62D3A00A6B4B5 /* AppDelegate.m */,
@@ -199,6 +212,12 @@
 				CEA64F881A30636400DBFD42 /* ViewController2.h */,
 				CEA64F891A30636400DBFD42 /* ViewController2.m */,
 				CEA64F8D1A30639A00DBFD42 /* ViewController2.xib */,
+				16BD2ABF1A4863740097EA33 /* ViewController3.h */,
+				16BD2AC01A4863740097EA33 /* ViewController3.m */,
+				16BD2AC11A4863740097EA33 /* ViewController3.xib */,
+				16BD2AC61A4866650097EA33 /* ViewController31.h */,
+				16BD2AC71A4866650097EA33 /* ViewController31.m */,
+				16BD2AC81A4866650097EA33 /* ViewController31.xib */,
 				CEA2811919E62D3A00A6B4B5 /* Images.xcassets */,
 				CEA2810819E62D3A00A6B4B5 /* Supporting Files */,
 			);
@@ -310,6 +329,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BD2ACA1A4866650097EA33 /* ViewController31.xib in Resources */,
+				16BD2AC31A4863740097EA33 /* ViewController3.xib in Resources */,
+				16BD2AC51A48647E0097EA33 /* ava@2x.png in Resources */,
 				CEA2811A19E62D3A00A6B4B5 /* Images.xcassets in Resources */,
 				CEA64F8E1A30639A00DBFD42 /* ViewController2.xib in Resources */,
 				CEA2810C19E62D3A00A6B4B5 /* InfoPlist.strings in Resources */,
@@ -339,9 +361,11 @@
 				1695A09A1A3999D500CFC214 /* MASConstraint.m in Sources */,
 				1695A09C1A3999D500CFC214 /* MASLayoutConstraint.m in Sources */,
 				1695A09F1A3999D500CFC214 /* NSArray+MASAdditions.m in Sources */,
+				16BD2AC21A4863740097EA33 /* ViewController3.m in Sources */,
 				1695A09E1A3999D500CFC214 /* MASViewConstraint.m in Sources */,
 				1695A09D1A3999D500CFC214 /* MASViewAttribute.m in Sources */,
 				1695A0A11A3999D500CFC214 /* View+MASAdditions.m in Sources */,
+				16BD2AC91A4866650097EA33 /* ViewController31.m in Sources */,
 				CEA2811219E62D3A00A6B4B5 /* AppDelegate.m in Sources */,
 				CEA2810E19E62D3A00A6B4B5 /* main.m in Sources */,
 				1695A0991A3999D500CFC214 /* MASCompositeConstraint.m in Sources */,

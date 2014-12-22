@@ -7,14 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 #import "ViewController2.h"
+#import "ViewController3.h"
+#import "ViewController31.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    ViewController2 *viewController = [[ViewController2 alloc] init];
+    ViewController31 *viewController = [[ViewController31 alloc] init];
     //self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     //self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
     

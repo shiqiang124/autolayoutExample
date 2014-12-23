@@ -30,20 +30,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="height" secondItem="pT6-6Q-M78" secondAttribute="height" id="3tC-ZT-QXG"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="trailing" secondItem="XBQ-XI-who" secondAttribute="trailing" id="6pb-Lf-ajn"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="width" secondItem="pT6-6Q-M78" secondAttribute="width" id="8X9-kM-iom"/>
-                <constraint firstItem="pT6-6Q-M78" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="Ado-Uf-5dV"/>
-                <constraint firstAttribute="trailing" secondItem="c0M-N5-fYa" secondAttribute="trailing" constant="20" symbolic="YES" id="AsE-in-wVi"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="height" secondItem="XBQ-XI-who" secondAttribute="height" id="CHZ-3E-eYk"/>
-                <constraint firstAttribute="bottom" secondItem="XBQ-XI-who" secondAttribute="bottom" constant="94" id="CcO-5e-AMP"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="bottom" secondItem="pT6-6Q-M78" secondAttribute="bottom" id="DPo-P2-tmg"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="leading" secondItem="pT6-6Q-M78" secondAttribute="trailing" constant="100" id="LgT-5l-Heu"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="top" secondItem="pT6-6Q-M78" secondAttribute="top" id="RAG-fA-OSG"/>
-                <constraint firstItem="pT6-6Q-M78" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="ehL-H0-V22"/>
-                <constraint firstItem="c0M-N5-fYa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="gLA-c9-cWd"/>
-                <constraint firstItem="XBQ-XI-who" firstAttribute="top" secondItem="pT6-6Q-M78" secondAttribute="bottom" constant="25" id="koe-C7-oyd"/>
-                <constraint firstItem="XBQ-XI-who" firstAttribute="leading" secondItem="pT6-6Q-M78" secondAttribute="leading" id="n8Q-Cm-zBU"/>
+                <constraint firstAttribute="trailing" secondItem="c0M-N5-fYa" secondAttribute="trailing" constant="20" id="1Wk-hS-zb0"/>
+                <constraint firstItem="pT6-6Q-M78" firstAttribute="leading" secondItem="XBQ-XI-who" secondAttribute="leading" id="5Nn-Dc-qYQ"/>
+                <constraint firstItem="pT6-6Q-M78" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="NHC-8f-M94"/>
+                <constraint firstItem="c0M-N5-fYa" firstAttribute="top" secondItem="pT6-6Q-M78" secondAttribute="top" id="Nah-CX-wa0"/>
+                <constraint firstItem="pT6-6Q-M78" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Osh-ES-gUV"/>
+                <constraint firstItem="c0M-N5-fYa" firstAttribute="width" secondItem="pT6-6Q-M78" secondAttribute="width" id="QIV-Vp-4k7"/>
+                <constraint firstItem="c0M-N5-fYa" firstAttribute="leading" secondItem="pT6-6Q-M78" secondAttribute="trailing" constant="100" id="SBH-KY-IMU"/>
+                <constraint firstAttribute="bottom" secondItem="XBQ-XI-who" secondAttribute="bottom" constant="94" id="YIn-j7-90X"/>
+                <constraint firstItem="XBQ-XI-who" firstAttribute="top" secondItem="pT6-6Q-M78" secondAttribute="bottom" constant="25" id="gXT-Fz-LBx"/>
+                <constraint firstItem="c0M-N5-fYa" firstAttribute="trailing" secondItem="XBQ-XI-who" secondAttribute="trailing" id="khV-5b-FRm"/>
+                <constraint firstItem="c0M-N5-fYa" firstAttribute="height" secondItem="pT6-6Q-M78" secondAttribute="height" id="n2C-RA-35M"/>
+                <constraint firstItem="pT6-6Q-M78" firstAttribute="height" secondItem="XBQ-XI-who" secondAttribute="height" id="yfW-Og-dZ1"/>
             </constraints>
         </view>
     </objects>

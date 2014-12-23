@@ -17,7 +17,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    ViewController31 *viewController = [[ViewController31 alloc] init];
+    ViewController *viewController = [[ViewController alloc] init];
+    //ViewController2 *viewController = [[ViewController2 alloc] init];
+    //ViewController3 *viewController = [[ViewController3 alloc] init];
+    //ViewController31 *viewController = [[ViewController31 alloc] init];
     //self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     //self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
     
